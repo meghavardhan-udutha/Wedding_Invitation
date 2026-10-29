@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>GopiKrishna Weds Sahithi (Sruthi)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Italiana&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --maroon: #6b1f24;
+      --deep: #3a0d12;
+      --gold: #d9a441;
+      --cream: #fbf6ea;
+      --ink: #4a2a2c;
+      --serif: "Cormorant Garamond", Georgia, serif;
+      --disp: "Italiana", "Cormorant Garamond", Georgia, serif;
+      box-sizing: border-box;
+      padding-top: env(safe-area-inset-top, 0px);
+      padding-bottom: env(safe-area-inset-bottom, 0px)
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: env(safe-area-inset-top, 0px)
+    }
+
+    body {
+      background: #1b0709;
+      font-family: var(--serif);
+      color: var(--ink);
+      overflow-x: hidden
+    }
+
+    body.lock {
+      overflow: hidden;
+      height: 100vh
+    }
+
+    main {
+      max-width: 480px;
+      margin: 0 auto;
+      background: var(--cream);
+      position: relative;
+      overflow: hidden
+    }
+
+    section {
+      position: relative;
+      padding: 64px 22px;
+      text-align: center
+    }
+
+    .eyebrow {
+      font-size: 10px;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: #8a6a5c;
+      margin-bottom: 10px
+    }
+
+    h2 {
+      font-family: var(--disp);
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 1.05;
+      color: var(--deep)
+    }
+
+    .sub {
+      font-style: italic;
+      font-size: 15px;
+      color: #6f5a52;
+      margin: 12px auto;
+      max-width: 300px
+    }
+
+    .orn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
+      margin: 14px 0;
+      color: var(--gold)
+    }
+
+    .orn:before,
+    .orn:after {
+      content: "";
+      height: 1px;
+      width: 56px;
+      background: linear-gradient(90deg, transparent, var(--gold))
+    }
+
+    .orn:after {
+      transform: scaleX(-1)
+    }
+
+    .garland {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 54px;
+      z-index: 3;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='54'%3E%3Cpath d='M0 6Q22 22 44 6' stroke='%23c98b2b' stroke-width='5' fill='none'/%3E%3Cpath d='M6 12l-5 30 11-22zM22 18l-5 30 11-22zM36 12l-5 30 11-22z' fill='%23557a2d'/%3E%3Ccircle cx='11' cy='10' r='5' fill='%23f2a81d'/%3E%3Ccircle cx='33' cy='10' r='5' fill='%23f6c453'/%3E%3C/svg%3E") repeat-x top/44px 54px;
+      transform-origin: top;
+      animation: sway 6s ease-in-out infinite alternate
+    }
+
+    @keyframes sway {
+      to {
+        transform: skewX(-.8deg)
+      }
+    }
+
+    .rv {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity .9s cubic-bezier(.2, .7, .2, 1) calc(var(--d, 0)*.12s), transform .9s cubic-bezier(.2, .7, .2, 1) calc(var(--d, 0)*.12s)
+    }
+
+    .rv.in {
+      opacity: 1;
+      transform: none
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, .72);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, .8);
+      border-radius: 22px;
+      box-shadow: 0 10px 30px rgba(90, 40, 20, .15)
+    }
+
+    .btn {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 13px;
+      border-radius: 30px;
+      border: 0;
+      font: 600 11px var(--serif);
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: #fff;
+      background: linear-gradient(#8a2b2b, #5e1519);
+      box-shadow: 0 6px 14px rgba(94, 21, 25, .35), inset 0 1px 0 rgba(255, 255, 255, .3);
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform .2s, box-shadow .2s
+    }
+
+    .btn:hover {
+      transform: translateY(-2px)
+    }
+
+    .btn:active {
+      transform: scale(.97)
+    }
+
+    .btn.gold {
+      background: linear-gradient(#f6d46a, #d9a441);
+      color: #4a1a10
+    }
+
+    .map-container {
+      width: 100%;
+      margin: 18px 0;
+      overflow: hidden;
+      border-radius: 14px;
+      border: 1px solid rgba(217, 164, 65, 0.4);
+    }
+
+    /* gate */
+    #gate {
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      background: #1b0709;
+      display: flex;
+      justify-content: center;
+      perspective: 1400px;
+      transition: opacity 1s ease .9s, visibility 0s 1.9s
+    }
+
+    #gate.open {
+      opacity: 0;
+      visibility: hidden
+    }
+
+    .gw {
+      position: relative;
+      width: 100%;
+      max-width: 480px;
+      height: 100%;
+      overflow: hidden;
+      background: radial-gradient(ellipse at 50% 100%, #8a4a14, #2a0a0c 60%)
+    }
+
+    .door {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 50%;
+      background: repeating-linear-gradient(90deg, rgba(0, 0, 0, .18) 0 2px, transparent 2px 26px), linear-gradient(#5a1519, #3a0b10);
+      transition: transform 1.5s cubic-bezier(.7, 0, .2, 1)
+    }
+
+    .door.l {
+      left: 0;
+      transform-origin: left;
+      border-right: 1px solid #1a0507
+    }
+
+    .door.r {
+      right: 0;
+      transform-origin: right
+    }
+
+    .open .door.l {
+      transform: rotateY(-105deg)
+    }
+
+    .open .door.r {
+      transform: rotateY(105deg)
+    }
+
+    .frame {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      pointer-events: none;
+      border: 14px solid transparent;
+      border-image: linear-gradient(90deg, #8a5a1a, #f1c35c, #8a5a1a) 1;
+      box-shadow: inset 0 0 40px rgba(0, 0, 0, .6);
+      transition: opacity .6s
+    }
+
+    .open .frame {
+      opacity: 0
+    }
+
+    .arch {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 130px;
+      z-index: 2;
+      background: linear-gradient(#a8661d, #5a2f0c);
+      border-bottom: 3px solid var(--gold);
+      border-radius: 0 0 50% 50%/0 0 40px 40px
+    }
+
+    .gc {
+      position: absolute;
+      z-index: 4;
+      left: 0;
+      right: 0;
+      top: 46%;
+      transform: translateY(-50%);
+      text-align: center;
+      color: #f5e6c8;
+      padding: 0 30px;
+      transition: opacity .5s
+    }
+
+    .open .gc {
+      opacity: 0
+    }
+
+    .gc small {
+      letter-spacing: .3em;
+      font-size: 9px;
+      color: #e8c27a
+    }
+
+    .gc h1 {
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: 34px;
+      color: #fff;
+      margin: 12px 0 4px
+    }
+
+    .gc p {
+      color: var(--gold);
+      font-size: 15px
+    }
+
+    .gc .dt {
+      letter-spacing: .35em;
+      font-size: 11px;
+      margin: 18px 0 26px;
+      color: #e8d3a8
+    }
+
+    .gc button {
+      background: #f7efe0;
+      border: 0;
+      border-radius: 30px;
+      padding: 13px 34px;
+      font: 600 10px var(--serif);
+      letter-spacing: .25em;
+      color: var(--maroon);
+      cursor: pointer;
+      animation: pulse 2.4s infinite
+    }
+
+    @keyframes pulse {
+      50% {
+        box-shadow: 0 0 0 10px rgba(247, 239, 224, .12)
+      }
+    }
+
+    .lamp {
+      position: absolute;
+      bottom: 34px;
+      z-index: 4;
+      width: 14px;
+      height: 90px;
+      background: linear-gradient(90deg, #8a5a1a, #f1c35c, #8a5a1a);
+      border-radius: 6px
+    }
+
+    .lamp:before {
+      content: "";
+      position: absolute;
+      top: -22px;
+      left: 2px;
+      width: 10px;
+      height: 22px;
+      border-radius: 50% 50% 50% 50%/70% 70% 30% 30%;
+      background: #ffd36a;
+      box-shadow: 0 0 24px 8px #ff9a1f;
+      animation: fl 1.2s infinite alternate
+    }
+
+    @keyframes fl {
+      to {
+        transform: scale(1.15, .9);
+        opacity: .85
+      }
+    }
+
+    /* hero */
+    #hero {
+      min-height: 100vh;
+      min-height: 100svh;
+      padding-top: 80px;
+      background: linear-gradient(#e9eef2, var(--cream) 45%, #f3dfb4);
+      display: flex;
+      flex-direction: column;
+      align-items: center
+    }
+
+    #hero:before,
+    #hero:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 26px;
+      z-index: 2;
+      background: repeating-linear-gradient(0deg, #3a1a0e 0 14px, #5a2d17 14px 18px)
+    }
+
+    #hero:before {
+      left: 0
+    }
+
+    #hero:after {
+      right: 0
+    }
+
+    .quote {
+      font-style: italic;
+      font-size: 13px;
+      color: #7a6358;
+      max-width: 230px
+    }
+
+    .names {
+      font-family: var(--disp);
+      font-size: clamp(40px, 12vw, 56px);
+      line-height: 1;
+      color: #5c2a2c;
+      margin-top: 18px
+    }
+
+    .weds {
+      display: block;
+      font: italic 22px var(--serif);
+      color: #8a4a3a;
+      margin: 6px 0
+    }
+
+    .cd {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      margin: 22px 0
+    }
+
+    .cd div {
+      width: 46px;
+      padding: 7px 0 5px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .85);
+      box-shadow: 0 3px 8px rgba(0, 0, 0, .12);
+      font: 600 16px var(--serif)
+    }
+
+    .cd small {
+      display: block;
+      font-size: 6px;
+      letter-spacing: .15em;
+      color: #8a6a5c;
+      text-transform: uppercase
+    }
+
+    .mandap {
+      width: 100%;
+      max-width: 330px;
+      margin-top: auto;
+      transition: transform .2s linear
+    }
+
+    /* grateful */
+    #thanks1 {
+      min-height: 100vh;
+      min-height: 100svh;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 70px 22px 90px;
+      background: radial-gradient(ellipse at 40% 45%, #f3a92f 0, #9a4a10 30%, #2a0f08 75%)
+    }
+
+    #thanks1 h2 {
+      color: #fff;
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: 32px
+    }
+
+    .couple {
+      width: 240px;
+      margin: 10px auto
+    }
+
+    .card {
+      position: relative;
+      min-height: 150px;
+      padding: 22px 20px;
+      background: #fbf6ea;
+      color: var(--ink);
+      border-radius: 14px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, .4);
+      cursor: pointer;
+      overflow: hidden
+    }
+
+    .card>div {
+      transition: opacity .8s, transform .8s
+    }
+
+    .card .msg {
+      position: absolute;
+      inset: 0;
+      padding: 20px;
+      opacity: 0;
+      transform: scale(.96);
+      font-size: 14px;
+      line-height: 1.45;
+      display: flex;
+      flex-direction: column;
+      justify-content: center
+    }
+
+    .card.on .cv {
+      opacity: 0;
+      transform: scale(1.05)
+    }
+
+    .card.on .msg {
+      opacity: 1;
+      transform: none
+    }
+
+    .cv {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 106px
+    }
+
+    .cv b {
+      font: italic 400 44px var(--serif);
+      color: #7a2a45
+    }
+
+    .cv small {
+      font-size: 8px;
+      letter-spacing: .25em;
+      color: #8a6a5c
+    }
+
+    .msg small {
+      font-size: 7px;
+      letter-spacing: .2em;
+      color: #8a6a5c;
+      margin: 6px 0 0
+    }
+
+    .petal {
+      position: absolute;
+      z-index: 5;
+      width: 9px;
+      height: 9px;
+      border-radius: 50% 0;
+      background: #fff3c8;
+      top: -10px;
+      animation: fall linear forwards;
+      pointer-events: none
+    }
+
+    @keyframes fall {
+      to {
+        transform: translate(var(--x), 110vh) rotate(540deg);
+        opacity: .2
+      }
+    }
+
+    /* families */
+    #fam {
+      background: linear-gradient(var(--cream), #f6e7c8);
+      padding-top: 96px
+    }
+
+    .who {
+      margin: 20px 0
+    }
+
+    .who b {
+      display: block;
+      font-family: var(--disp);
+      font-weight: 400;
+      font-size: 32px;
+      color: var(--deep)
+    }
+
+    .who i {
+      display: block;
+      font-size: 12px;
+      color: #8a6a5c
+    }
+
+    .who span {
+      display: block;
+      font-weight: 600;
+      font-size: 14px;
+      margin-top: 4px
+    }
+
+    .rang {
+      height: 120px;
+      margin: 22px -22px 0;
+      background: radial-gradient(circle at 50% 120%, #f6d98f, transparent 60%), repeating-radial-gradient(circle at 50% 100%, rgba(190, 140, 70, .25) 0 2px, transparent 2px 14px)
+    }
+
+    /* wedding */
+    #wed {
+      background: linear-gradient(#f3e6c8, var(--cream))
+    }
+
+    .loc {
+      margin: 26px 0 14px
+    }
+
+    .loc b {
+      display: block;
+      font-family: var(--disp);
+      font-weight: 400;
+      font-size: 30px;
+      color: var(--deep)
+    }
+
+    .ev {
+      display: grid;
+      grid-template-columns: 62px 1fr;
+      gap: 10px;
+      padding: 12px;
+      text-align: left;
+      margin-bottom: 12px
+    }
+
+    .day {
+      text-align: center;
+      padding-top: 8px;
+      font-family: var(--disp)
+    }
+
+    .day b {
+      display: block;
+      font-size: 30px;
+      font-weight: 400;
+      line-height: 1
+    }
+
+    .day small {
+      display: block;
+      font: 9px var(--serif);
+      letter-spacing: .2em;
+      color: #8a6a5c;
+      margin-top: 2px
+    }
+
+    .it {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      padding: 10px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, .55);
+      margin-bottom: 8px
+    }
+
+    .it.hl {
+      background: rgba(217, 164, 65, .22)
+    }
+
+    .ic {
+      flex: none;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: #f1e4cf;
+      display: grid;
+      place-items: center;
+      font-size: 13px
+    }
+
+    .it b {
+      display: block;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 1.1
+    }
+
+    .it small {
+      font-size: 11px;
+      color: #7a6358
+    }
+
+    .venue {
+      padding: 22px 18px
+    }
+
+    .venue h3 {
+      font-family: var(--disp);
+      font-weight: 400;
+      font-size: 28px;
+      color: var(--deep);
+      line-height: 1.05;
+      margin: 6px 0 10px
+    }
+
+    .venue p {
+      font-size: 13px;
+      margin-bottom: 16px
+    }
+
+    /* reception */
+    #rec {
+      color: #fff;
+      background: radial-gradient(ellipse at 50% 0, #9a1f2b, #4a0a12 60%, #2a050a);
+      padding-top: 84px;
+      overflow: hidden
+    }
+
+    #rec h2 {
+      color: #fff
+    }
+
+    #rec .sub {
+      color: #f0d6c8
+    }
+
+    #rec .eyebrow {
+      color: #e8c27a
+    }
+
+    .lights {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 150px;
+      pointer-events: none;
+      background: repeating-linear-gradient(90deg, transparent 0 30px, rgba(246, 196, 83, .5) 30px 31px);
+      -webkit-mask: linear-gradient(#000, transparent);
+      mask: linear-gradient(#000, transparent)
+    }
+
+    .lights:after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle, #ffbf4a 0 3px, transparent 4px) 0 0/62px 54px;
+      animation: tw 2.6s infinite alternate
+    }
+
+    @keyframes tw {
+      to {
+        opacity: .35
+      }
+    }
+
+    #rec .ev {
+      background: transparent;
+      border: 0;
+      box-shadow: none;
+      padding: 0;
+      margin-top: 22px
+    }
+
+    #rec .day {
+      background: rgba(190, 150, 200, .5);
+      border-radius: 18px;
+      color: #fff;
+      padding: 14px 0
+    }
+
+    #rec .it {
+      background: rgba(120, 15, 25, .7)
+    }
+
+    #rec .it small {
+      color: #f0d6c8
+    }
+
+    #rec .venue {
+      background: rgba(255, 255, 255, .08);
+      color: #fff;
+      border-color: rgba(255, 255, 255, .2)
+    }
+
+    #rec .venue h3 {
+      color: #fff
+    }
+
+    /* guide */
+    #guide {
+      background: linear-gradient(#fff, #f6efe0);
+      padding-top: 70px
+    }
+
+    .tr {
+      margin-top: 30px;
+      text-align: left
+    }
+
+    .tr small {
+      letter-spacing: .2em;
+      font-size: 9px;
+      color: #8a6a5c;
+      text-transform: uppercase
+    }
+
+    .tr h3 {
+      font-family: var(--disp);
+      font-weight: 400;
+      font-size: 38px;
+      line-height: 1.05;
+      color: var(--deep)
+    }
+
+    .tr h3 em {
+      display: block;
+      font-style: normal;
+      letter-spacing: .04em
+    }
+
+    .gcard {
+      padding: 18px 14px;
+      margin-top: 22px;
+      text-align: left
+    }
+
+    .tab {
+      text-align: center;
+      font-size: 9px;
+      letter-spacing: .22em;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #eadfcf;
+      text-transform: uppercase
+    }
+
+    .lab {
+      font-size: 9px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: #7a6358;
+      margin: 16px 0 10px
+    }
+
+    .st {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      text-align: center
+    }
+
+    .st div {
+      padding: 4px;
+      border-right: 1px solid #eadfcf
+    }
+
+    .st div:last-child {
+      border: 0
+    }
+
+    .st b {
+      display: block;
+      font-size: 14px;
+      letter-spacing: .04em
+    }
+
+    .st small {
+      display: block;
+      font-size: 9px;
+      color: #8a6a5c
+    }
+
+    .tn {
+      display: grid;
+      grid-template-columns: 62px 1fr;
+      gap: 6px;
+      padding: 10px 0;
+      border-top: 1px solid #eadfcf;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .03em
+    }
+
+    .tn small {
+      font-size: 8px;
+      letter-spacing: .14em;
+      color: #8a6a5c;
+      text-transform: uppercase;
+      font-weight: 400
+    }
+
+    .help {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-top: 14px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: rgba(217, 164, 65, .14);
+      font-size: 13px;
+      text-align: left;
+      text-decoration: none;
+      color: var(--ink)
+    }
+
+    .help i {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--maroon);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-style: normal;
+      font-size: 12px
+    }
+
+    /* places */
+    #places {
+      background: linear-gradient(#f6efe0, #fff);
+      padding-bottom: 30px
+    }
+
+    .car {
+      display: flex;
+      gap: 14px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      margin: 22px -22px 0;
+      padding: 6px 22px 14px;
+      scrollbar-width: none
+    }
+
+    .car::-webkit-scrollbar {
+      display: none
+    }
+
+    .pc {
+      flex: 0 0 82%;
+      scroll-snap-align: center;
+      border-radius: 22px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 12px 30px rgba(60, 30, 10, .18);
+      position: relative;
+      transition: transform .4s
+    }
+
+    .pi {
+      height: 210px;
+      position: relative
+    }
+
+    .pi:after {
+      content: attr(data-n);
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      padding: 5px 9px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, .85);
+      font-size: 11px;
+      letter-spacing: .1em
+    }
+
+    .pb {
+      padding: 30px 16px 18px;
+      position: relative
+    }
+
+    .pb .ico {
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      margin-left: -20px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, .15);
+      display: grid;
+      place-items: center
+    }
+
+    .pb h3 {
+      font-family: var(--disp);
+      font-weight: 400;
+      font-size: 25px;
+      color: var(--deep);
+      margin: 6px 0
+    }
+
+    .pb p {
+      font-size: 13px;
+      color: #6f5a52
+    }
+
+    .pb ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 10px;
+      font-size: 13px;
+      display: inline-block;
+      text-align: left
+    }
+
+    .pb li:before {
+      content: "◆ ";
+      color: var(--gold);
+      font-size: 8px
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 6px
+    }
+
+    .nav button {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 0;
+      background: #fff;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, .15);
+      cursor: pointer;
+      font-size: 15px;
+      color: var(--maroon)
+    }
+
+    .dots {
+      display: flex;
+      gap: 6px
+    }
+
+    .dots i {
+      width: 18px;
+      height: 3px;
+      border-radius: 2px;
+      background: #dcc9b0;
+      transition: .3s
+    }
+
+    .dots i.on {
+      background: var(--gold);
+      width: 28px
+    }
+
+    /* end */
+    #end {
+      background: linear-gradient(#fff, #f9edcf);
+      padding-bottom: 40px
+    }
+
+    .pill {
+      display: inline-block;
+      margin: 14px 0;
+      padding: 7px 16px;
+      border-radius: 20px;
+      background: #e8eff5;
+      font-size: 11px;
+      font-style: italic;
+      color: #5a6a78
+    }
+
+    .foot {
+      font-size: 9px;
+      letter-spacing: .2em;
+      color: #8a6a5c;
+      margin-top: 30px
+    }
+
+    .heart {
+      color: #c9791f;
+      font-size: 16px
+    }
+
+    #music {
+      position: fixed;
+      top: calc(12px + env(safe-area-inset-top, 0px));
+      right: max(12px, calc(50% - 228px));
+      z-index: 40;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 0;
+      background: rgba(255, 255, 255, .9);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, .25);
+      display: none;
+      gap: 2px;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 10px 0;
+      cursor: pointer
+    }
+
+    body.in #music {
+      display: flex
+    }
+
+    #music i {
+      width: 3px;
+      height: 6px;
+      background: var(--maroon);
+      border-radius: 2px
+    }
+
+    #music.play i {
+      animation: eq .8s infinite alternate
+    }
+
+    #music.play i:nth-child(2) {
+      animation-delay: .2s
+    }
+
+    #music.play i:nth-child(3) {
+      animation-delay: .4s
+    }
+
+    @keyframes eq {
+      to {
+        height: 14px
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+      * {
+        animation: none !important;
+        transition-duration: .01s !important
+      }
+
+      .rv {
+        opacity: 1;
+        transform: none
+      }
+    }
+  </style>
+</head>
+
+<body class="lock">
+  <button id="music" aria-label="Toggle music"><i></i><i></i><i></i></button>
+
+  <div id="gate">
+    <div class="gw">
+      <div class="door l"></div>
+      <div class="door r"></div>
+      <div class="frame"></div>
+      <div class="arch"></div>
+      <div class="garland" style="top:92px"></div>
+      <div class="gc"><small>WITH ALL OUR HEARTS</small>
+        <h1>You are invited</h1>
+        <p>to celebrate with us</p>
+        <div class="dt" data-k="gateDate"></div><button id="openBtn">OPEN INVITATION</button>
+      </div>
+      <div class="lamp" style="left:26px"></div>
+      <div class="lamp" style="right:26px"></div>
+    </div>
+  </div>
+
+  <main>
+    <section id="hero">
+      <div class="garland"></div>
+      <p class="quote rv">“Two hearts found their way to each other, and from this moment on, every road leads home.”
+      </p>
+      <div class="names rv" style="--d:1"><span data-k="groom"></span><span class="weds">Weds</span><span
+          data-k="bride"></span></div>
+      <div class="cd rv" style="--d:2" id="cd">
+        <div><b>0</b><small>Days</small></div>
+        <div><b>0</b><small>Hours</small></div>
+        <div><b>0</b><small>Min</small></div>
+        <div><b>0</b><small>Sec</small></div>
+      </div>
+      <svg class="mandap" viewBox="0 0 330 250" aria-hidden="true">
+        <defs>
+          <linearGradient id="st" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#d9a441" />
+            <stop offset="1" stop-color="#6b3a12" />
+          </linearGradient>
+        </defs>
+        <path d="M10 250V170Q165 140 320 170V250z" fill="#f3d58a" opacity=".5" />
+        <path d="M40 120Q10 80 20 40Q50 70 60 120zM290 120Q320 80 310 40Q280 70 270 120z" fill="#7a9a2d" />
+        <path d="M60 120Q55 60 90 40Q85 90 80 120zM270 120Q275 60 240 40Q245 90 250 120z" fill="#9ab53a" />
+        <rect x="75" y="70" width="180" height="12" rx="3" fill="#c98b2b" />
+        <path d="M75 82q15 18 30 0t30 0 30 0 30 0 30 0 30 0" fill="#f2a81d" />
+        <rect x="80" y="82" width="6" height="90" fill="#c98b2b" />
+        <rect x="244" y="82" width="6" height="90" fill="#c98b2b" />
+        <circle cx="125" cy="160" r="9" fill="#e8b27a" />
+        <path d="M110 200q15-40 30 0z" fill="#b8342d" />
+        <circle cx="165" cy="155" r="9" fill="#e0a070" />
+        <path d="M150 200q15-44 30 0z" fill="#f4e3c0" />
+        <circle cx="205" cy="160" r="9" fill="#e8b27a" />
+        <path d="M190 200q15-40 30 0z" fill="#f4e3c0" />
+        <circle cx="165" cy="190" r="6" fill="#ffb02e">
+          <animate attributeName="opacity" values="1;.5;1" dur="1.4s" repeatCount="indefinite" />
+        </circle>
+        <rect x="50" y="200" width="230" height="50" fill="url(#st)" />
+        <path d="M40 215h250M30 230h270" stroke="#3a1a0a" stroke-opacity=".4" />
+      </svg>
+    </section>
+
+    <section id="thanks1">
+      <div>
+        <p class="eyebrow rv" style="color:#f1d9a0">A moment made complete by you</p>
+        <h2 class="rv" style="--d:1">With Grateful Hearts</h2>
+        <svg class="couple rv" style="--d:2" viewBox="0 0 240 230" aria-hidden="true">
+          <circle cx="120" cy="90" r="90" fill="#ffb347" opacity=".25" />
+          <path d="M30 230q10-110 55-120t30 120z" fill="#8a2630" />
+          <circle cx="82" cy="78" r="22" fill="#3a1a14" />
+          <path d="M60 80q-18 40 6 90" stroke="#f6efdd" stroke-width="7" stroke-dasharray="2 5" fill="none" />
+          <path d="M125 230q5-120 55-125t45 125z" fill="#f2e2c0" />
+          <circle cx="170" cy="78" r="22" fill="#3a1a14" />
+        </svg>
+      </div>
+      <div class="card rv" id="card">
+        <div class="cv"><small>A MESSAGE FOR YOU</small><b>Open</b></div>
+        <div class="msg"><small>TO OUR DEAREST FAMILY &amp; FRIENDS</small>
+          <p style="margin:10px 0">Some moments become memories because of the people who share them. As we step into
+            this beautiful new chapter, it would mean the world to have you beside us—blessing our beginning, sharing
+            our joy, and making our celebration complete.</p><small>WITH LOVE, <span data-k="gU"></span> &amp; <span
+              data-k="bU"></span></small>
+        </div>
+      </div>
+    </section>
+
+    <section id="fam">
+      <div class="garland"></div>
+      <p class="eyebrow rv">With the blessings of</p>
+      <h2 class="rv" style="--d:1">Our Families</h2>
+      <div class="orn rv">❖</div>
+      <p class="sub rv">With joyful hearts, we invite you to celebrate our wedding</p>
+      <div class="who rv">
+        <p class="eyebrow">The Groom</p><b data-k="groom"></b><i>Son of</i><span>Myana Mallesham &amp;
+          Nirmala</span><i>Mallial, Jagityal, Telangana</i>
+      </div>
+      <div class="orn rv">And</div>
+      <div class="who rv">
+        <p class="eyebrow">The Bride</p><b data-k="bride"></b><i>Daughter of</i><span>Nilagiri Neeraja &amp; Late
+          Sunil</span><i>Adilabad, Telangana</i>
+      </div>
+      <div class="rang"></div>
+    </section>
+
+    <section id="wed">
+      <h2 class="rv">The Wedding</h2>
+      <p class="sub rv" style="--d:1">Join us as the celebrations begin and two hearts become one.</p>
+      <div class="loc rv">
+        <p class="eyebrow">Location</p><b>Hyderabad</b>
+      </div>
+      <div class="glass ev rv">
+        <!-- <div class="day"><b>16</b>NOV<small>MONDAY</small></div>
+        <div>
+          <div class="it"><span class="ic">👥</span>
+            <div><b>Groom Welcoming</b><small>◷ 4:30 PM – 5:30 PM</small></div>
+          </div>
+          <div class="it"><span class="ic">💍</span>
+            <div><b>Engagement</b><small>◷ 6:30 PM onwards</small></div>
+          </div>
+        </div> -->
+        <div class="day"><b>16</b>NOV<small>MONDAY</small></div>
+        <div class="it hl"><span class="ic">🛕</span>
+          <div><b>Wedding Ceremony</b><small>◷ 12:05 PM</small></div>
+        </div>
+      </div>
+      <!-- <div class="glass venue rv">
+        <p class="eyebrow">Wedding Venue</p>
+        <h3>Sri Laxmi A/C Convention Hall</h3>
+        <p>◉ Karmanghat Rd, opp. Indra Nagendra Theater, Saroornagar, Brindavan Colony, Hyderabad, Telangana 500035</p>
+        <a class="btn" href="https://maps.app.goo.gl/J3U2EXhgG2XvFZEi8" target="_blank" rel="noopener">➤ Get
+          Directions</a>
+      </div> -->
+
+
+      <div class="glass venue rv">
+        <p class="eyebrow">Wedding Venue</p>
+        <h3>Sri Lakshmi AC Convention Hall</h3>
+
+        <p>◉ Karmanghat Rd, opp. Indra Nagendra Theater, Saroornagar, Brindavan Colony, Hyderabad, Telangana 500035</p>
+
+        <div class="map-container">
+          <iframe title="Sri Lakshmi AC Convention Hall Google Map"
+            src="https://maps.google.com/maps?q=Sri%20Lakshmi%20AC%20Convention%20Hall%2C%20Karmanghat%20Rd%2C%20Hyderabad%2C%20Telangana%20500035&output=embed"
+            width="100%" height="280" style="border:0; border-radius:14px;" loading="lazy" allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+        <a class="btn"
+          href="https://www.google.com/maps/dir/?api=1&destination=Sri%20Lakshmi%20AC%20Convention%20Hall%2C%20Karmanghat%20Rd%2C%20Hyderabad%2C%20Telangana%20500035"
+          target="_blank" rel="noopener">
+          ➤ Get Directions
+        </a>
+      </div>
+
+
+    </section>
+
+    <section id="rec">
+      <div class="lights"></div>
+      <h2 class="rv">The Reception</h2>
+      <p class="sub rv" style="--d:1">An evening of joy, dinner and dancing as we celebrate our new beginning.</p>
+      <p class="eyebrow rv" style="margin-top:26px">Join us in</p>
+      <h2 class="rv" style="font-size:30px">Mallial, Jagityal</h2>
+      <div class="ev rv">
+        <div class="day"><b>18</b>NOV<small>WEDNESDAY</small></div>
+        <div class="it"><span class="ic">🪔</span>
+          <div><b>Evening Celebration</b><small>◷ 12:30 PM onwards</small></div>
+        </div>
+      </div>
+      <!-- <div class="glass venue rv" style="margin-top:20px">
+        <p class="eyebrow">Venue</p>
+        <h3>Kotha Naresh Function Hall</h3>
+        <p>◉ Mallial Cross Road, Mallial, Jagityal, Telangana, 505452</p>
+        <a class="btn gold" href="https://maps.app.goo.gl/J3U2EXhgG2XvFZEi8" target="_blank" rel="noopener">➤ Get
+          Directions</a>
+      </div> -->
+
+
+      <div class="glass venue rv" style="margin-top:20px">
+        <p class="eyebrow">Nearby Landmark</p>
+        <h3>Hindustan Petroleum Corporation Limited</h3>
+
+        <p>◉ Nookapalli, Mallial, Jagityal, Telangana</p>
+
+        <div class="map-container">
+          <iframe title="Hindustan Petroleum Corporation Limited, Nookapalli Mallial Map"
+            src="https://maps.google.com/maps?q=Hindustan%20Petroleum%20Corporation%20Limited%2C%20Nookapalli%2C%20Mallial%2C%20Jagityal%2C%20Telangana&output=embed"
+            width="100%" height="280" style="border:0; border-radius:14px;" loading="lazy" allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+        <a class="btn gold"
+          href="https://www.google.com/maps/dir/?api=1&destination=Hindustan%20Petroleum%20Corporation%20Limited%2C%20Nookapalli%2C%20Mallial%2C%20Jagityal%2C%20Telangana"
+          target="_blank" rel="noopener">
+          ➤ Get Directions
+        </a>
+      </div>
+
+
+    </section>
+
+    <section id="end">
+      <div class="heart rv">♥</div>
+      <p class="eyebrow rv">With grateful hearts</p>
+      <h2 class="rv" style="--d:1;font-size:48px">Thank You</h2>
+      <div class="orn rv">❖</div>
+      <p class="sub rv" style="max-width:320px">Your presence and blessings will make our celebration complete. We would
+        be honoured to share this beautiful beginning with you.</p>
+      <p class="rv" style="font-weight:600;margin-top:14px">With love, <span data-k="gU"></span> &amp; <span
+          data-k="bU"></span></p><span class="pill rv">Our families look forward to welcoming you.</span>
+      <p class="foot rv">MADE WITH <span class="heart" style="font-size:10px">♥</span> FOR YOU</p>
+    </section>
+  </main>
+
+  <script>
+    // ---- Customize here ----
+    const C = {
+      groom: "GopiKrishna", bride: "Sahithi (Sruthi)", gU: "GopiKrishna", bU: "Sahithi (Sruthi)", gateDate: "16 · 11 · 2026", when: "2026-11-16T07:15:00+05:30",
+      places: [
+        { t: "Temple Run", tag: "Sacred architecture & heritage", d: "Explore the divine energy and architectural grandeur of the region’s ancient temples.", l: ["Srivilliputhur", "Madurai Meenakshi", "Thiruchendur"], ic: "🛕", g: "linear-gradient(#f6b66a,#c4622d 55%,#3d4f5a)" },
+        { t: "Coastal Escapes", tag: "A quiet day beside the sea", d: "Follow the golden shore to peaceful shores, sea breeze and unhurried moments by the water.", l: ["Manapad", "Tiruchendur", "Kanyakumari"], ic: "➤", g: "linear-gradient(#ffb347,#e98a2b 40%,#2fb5b0 62%,#1d7f86)" },
+        { t: "Waterfall Getaways", tag: "Nature, mist & green hills", d: "Cool cascades and forest trails for a refreshing escape from the celebrations.", l: ["Courtallam", "Five Falls", "Kutladampatti"], ic: "♡", g: "linear-gradient(#cfe5d0,#4f8a4a 45%,#1d4a2c)" }]
+    };
+    const $ = (s, r = document) => [...r.querySelectorAll(s)];
+    $("[data-k]").forEach(e => e.textContent = C[e.dataset.k]);
+    $("[data-map]").forEach(a => a.href = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(a.dataset.map));
+    // reveal on scroll
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) } }), { threshold: .15 });
+    $(".rv").forEach(e => io.observe(e));
+    // countdown
+    const cd = $("#cd b"); (function t() { let s = Math.max(0, Math.floor((new Date(C.when) - Date.now()) / 1e3));[Math.floor(s / 86400), Math.floor(s % 86400 / 3600), Math.floor(s % 3600 / 60), s % 60].forEach((v, i) => cd[i].textContent = v); setTimeout(t, 1000) })();
+    // message card + petals
+    $("#card")[0].onclick = function () {
+      if (this.classList.contains("on")) return; this.classList.add("on"); if (matchMedia("(prefers-reduced-motion:reduce)").matches) return;
+      for (let i = 0; i < 16; i++) { const p = document.createElement("i"); p.className = "petal"; p.style.cssText = `left:${Math.random() * 100}%;--x:${Math.random() * 80 - 40}px;animation-duration:${4 + Math.random() * 4}s;animation-delay:${Math.random() * 1.5}s`; this.closest("section").appendChild(p); setTimeout(() => p.remove(), 9500) }
+    };
+    // mandap parallax
+    const m = $(".mandap")[0]; if (!matchMedia("(prefers-reduced-motion:reduce)").matches) addEventListener("scroll", () => { m.style.transform = `translateY(${Math.min(scrollY, 500) * .12}px)` }, { passive: true });
+    // gate
+    $("#openBtn")[0].onclick = () => { $("#gate")[0].classList.add("open"); document.body.classList.remove("lock"); document.body.classList.add("in"); scrollTo(0, 0); setTimeout(() => $("#gate")[0].remove(), 2000) };
+    // music: soft generated pentatonic loop (no audio file needed; starts only after a tap)
+    let ac, timer, on = false; const mb = $("#music")[0];
+    function note() { const f = [261.6, 293.7, 329.6, 392, 440, 523.3][Math.floor(Math.random() * 6)], t = ac.currentTime, o = ac.createOscillator(), g = ac.createGain(); o.type = "sine"; o.frequency.value = f; g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(.08, t + .05); g.gain.exponentialRampToValueAtTime(.001, t + 2.2); o.connect(g).connect(ac.destination); o.start(t); o.stop(t + 2.3) }
+    mb.onclick = () => { try { ac = ac || new (window.AudioContext || window.webkitAudioContext)(); on = !on; if (on) { ac.resume(); note(); timer = setInterval(note, 650) } else { clearInterval(timer) } mb.classList.toggle("play", on) } catch (e) { } };
+  </script>
+</body>
+
+</html>
